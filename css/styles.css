@@ -1,0 +1,202 @@
+html,body {
+    margin:0;
+    padding:0;
+	min-width: 320px;
+	font-family: "Roboto", sans-serif;
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 16px;
+	color: #606060;
+	height: 100vh;
+}
+
+div.container {
+	background: #fff;
+	padding: 0 2.0rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+	color: #303030;
+}
+
+h1[id]::before,
+h2[id]::before {
+  content: '';
+  display: block;
+  height:      75px;
+  margin-top: -75px;
+  visibility: hidden;
+}
+
+header {
+	width: 100%;
+}
+
+header > div.navbar-fixed {
+	min-width: 320px;
+	background-color: #222;
+	min-height: 50px;
+	color: white;
+}
+
+nav .brand-logo {
+	position: relative;
+	background-color: #4776e6;
+	padding: 0 20px !important;
+}
+
+nav ul:not(.dropdown-content)>li>a:hover:not(.active) {
+	background-color: #648ae5;
+}
+
+header > div.navbar-fixed  > nav {
+	background-color: #4776e6;
+}
+
+header > div.navbar-fixed  > nav ul.x-burger {
+	padding: 0;
+	margin: 0;
+}
+
+ul.x-desktop-navigation {
+	float: none !important;
+	white-space:nowrap;
+	overflow-x: auto;
+	scrollbar-color: #ddd transparent;
+	scrollbar-width: thin;
+}
+
+ul.x-desktop-navigation > li {
+	float: none !important;
+	display: inline-block !important;
+}
+
+ul.x-mobile-navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+h1 {
+	font-size: 44px;
+}
+
+h2 {
+	font-size: 34px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+i.x-menu {
+    color: white;
+}
+
+img[src*="#x-image-in-circle"] {
+	border-radius: 50%;
+	max-width: 40%;
+	min-width: 240px;
+    height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+div.x-sidenav-close {
+	text-align: right;
+}
+
+div.x-sidenav-close > a {
+	margin: 0 5px;
+}
+
+div.x-sidenav-close > a > span.material-icons {
+	color: #303030;
+	padding: 5px;
+}
+
+.sidenav li > a {
+	color: #303030 !important;
+}
+
+.sidenav li > a > .material-icons {
+	color: black !important;
+	margin-right: 0 !important;
+}
+
+.x-icon {
+	vertical-align: middle;
+	display: inline-block !important;
+}
+
+#x-loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+div.panel {
+    min-height: 100vh;
+	position: relative;
+	opacity: 0;
+	transition: 3s all ease;
+}
+
+div.panel.active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+	main {
+		background: #fff;
+	}
+	
+	h1 {
+		font-size: 22px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	h4 {
+		font-size: 14px;
+	}
+
+	h5 {
+		font-size: 14px;
+	}
+
+	h6 {
+		font-size: 14px;
+	}
+	
+	nav .brand-logo {
+		font-size: 14px;
+	}	
+}
