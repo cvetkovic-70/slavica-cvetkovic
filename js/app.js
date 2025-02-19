@@ -32,12 +32,13 @@ const app = Vue.createApp({
 		})
 		.catch((error) => {
 			this.$root.hideLoader();
-		});		
+		});
 
 	},
 	mounted() {
 		var elems = document.querySelectorAll('.sidenav');
-		var instances = M.Sidenav.init(elems, {});		
+		var instances = M.Sidenav.init(elems, {});
+		
 		window.addEventListener("scroll", reveal, {passive: true});
 	},
 	methods: {
@@ -60,7 +61,7 @@ const app = Vue.createApp({
 				this.navigation[i++] = matches[1].trim();
 			}
 		},
-		close() {
+		closeSideNav() {
 			var elems = document.querySelectorAll('.sidenav');
 			if(elems[0] !== "undefined") {
 				var instance = M.Sidenav.getInstance(elems[0]);

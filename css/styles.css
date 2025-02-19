@@ -47,10 +47,11 @@ nav .brand-logo {
 	position: relative;
 	background-color: #4776e6;
 	padding: 0 20px !important;
+	font-size: 1.5rem !important;
 }
 
 nav ul:not(.dropdown-content)>li>a:hover:not(.active) {
-	background-color: #648ae5;
+	background-color: #6894fd;
 }
 
 header > div.navbar-fixed  > nav {
@@ -156,6 +157,27 @@ div.x-sidenav-close > a > span.material-icons {
 	left: 50%;
 }
 
+a.x-button-top {
+	position: fixed;
+    bottom: 25px;
+    right: 30px;
+	background: #4776e6;
+	color: #fff;
+	opacity: 0.9;
+	display:block;
+	padding: 8px 10px;
+	border-radius: 25px;
+	z-index: 255;
+}
+
+a.x-button-top:hover {
+	background: #6894fd;
+}
+
+div.x-content {
+	min-height: 100vh;
+}
+
 div.panel {
     min-height: 100vh;
 	position: relative;
@@ -198,5 +220,9 @@ div.panel.active {
 	
 	nav .brand-logo {
 		font-size: 14px;
+	}	
+	
+	nav .brand-logo {
+		font-size: 1.2rem !important;
 	}	
 }

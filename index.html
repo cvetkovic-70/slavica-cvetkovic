@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="sr">
 	<head>
-		<title>Slavica Cvetković</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slavica Cvetković</title>
+		<link type="text/css" rel="stylesheet" href="./css/fonts.css" />
+		<link type="text/css" rel="stylesheet" href="./css/materialize.min.css" />
+		<link type="text/css" rel="stylesheet" href="./css/styles.css" />		
 		<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩺</text></svg>">
 		<meta name="description" content="" />
 		<meta name="keywords" content=""/>
 		<meta name="pragma" content="no-cache" />
 		<meta name="cache-control" content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0, proxy-revalidate" />
 		<meta name="robots" content="index, follow"/>
-		<link type="text/css" rel="stylesheet" href="./css/fonts.css" />
-		<link type="text/css" rel="stylesheet" href="./css/materialize.min.css" />
-		<link type="text/css" rel="stylesheet" href="./css/styles.css" />
+		<meta property="og:title" content="" />
+		<meta property="og:type" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:alt" content="" />
 	</head>
 	<body id="app">	
 		<header>
@@ -20,7 +25,7 @@
 				<!-- desktop navigation start -->
 				<nav>
 					<div class="nav-wrapper">
-						<a href="#" class="brand-logo right">Dr. Slavic Cvetković</a>
+						<a href="#" class="brand-logo right"><i class="small material-icons x-icon">local_hospital</i>Dr. Slavic Cvetković</a>
 						<ul class="x-desktop-navigation left hide-on-small-only">
 							<template v-for="(value, index) in navigation">
 								<li><a v-bind:href="'#content-'+index">{{ value }}</a></li>
@@ -44,21 +49,24 @@
 				<ul id="slide-out" class="sidenav">
 					<li>
 						<div class="x-sidenav-close">
-							<a class="sidenav-close" rel="nofollow" href="javascript:void(0);">
+							<a class="sidenav-close" role="button" tabindex="0">
 								<span class="material-icons">close</span>
 							</a>
 						</div>
 					</li>
 					<li><div class="divider"></div></li>
 					<template v-for="(value, index) in navigation">
-						<li><a v-bind:href="'#content-'+index" v-on:click="close">{{ value }}</a></li>
+						<li><a v-bind:href="'#content-'+index" v-on:click="closeSideNav">{{ value }}</a></li>
 					</template>
 				</ul>
 				<!-- mobile navigation end -->
-				<div v-html="html"></div>
+				<div class="x-content" v-html="html"></div>
 				<div class="center-align">© {{ date }} Dr. Slavica Cvetković</div>
 			</div>
 		</main>
+		<a class="x-button-top hide-on-med-and-up show-on-small" href="#">
+		  <i class="material-icons">arrow_drop_up</i>
+		</a>		
 		<div id="x-loader">		
 			<div class="preloader-wrapper big active" v-if="isLoading">
 			  <div class="spinner-layer spinner-blue-only">
